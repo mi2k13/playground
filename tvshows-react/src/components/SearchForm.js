@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from './common/Button';
 
-const SearchForm = ({ placeholder }) => (
-  <form>
+const SearchForm = ({ handleChange, handleSubmit, placeholder }) => (
+  <form onSubmit={handleSubmit}>
     <input
+      onChange={handleChange}
       placeholder={placeholder}
       type="search"
     />
@@ -15,6 +16,8 @@ const SearchForm = ({ placeholder }) => (
 );
 
 SearchForm.propTypes = {
+  handleChange: React.PropTypes.func,
+  handleSubmit: React.PropTypes.func,
   placeholder: React.PropTypes.string,
 };
 
