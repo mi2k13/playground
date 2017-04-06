@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Map } from 'immutable';
 
+// ============================================
+
 const ShowListItem = ({ show }) => (
   <div>
     <Link to={`/show/${show.get('id')}`}>

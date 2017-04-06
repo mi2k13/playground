@@ -1,6 +1,9 @@
 import React from 'react';
 import { List } from 'immutable';
+// components
 import ShowListItem from './ShowListItem';
+
+// ============================================
 
 const ShowsList = ({ shows }) => (
   <ul>

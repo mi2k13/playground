@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import SearchShowContainer from './containers/SearchShowContainer';
-import Show from './components/Show';
+import ShowContainer from './containers/ShowContainer';
 import Collection from './components/Collection';
 import './index.css';
 
@@ -20,7 +20,7 @@ ReactDOM.render(
 
         <Route exact path="/" component={SearchShowContainer} />
         <Route path="/collection" component={Collection} />
-        <Route path="/show/:id" component={Show} />
+        <Route path="/show/:id" component={ShowContainer} />
       </div>
     </BrowserRouter>
   </Provider>,

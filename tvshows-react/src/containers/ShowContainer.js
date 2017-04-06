@@ -1,0 +1,25 @@
+import { connect } from 'react-redux';
+// actions
+import { fetchShowIfNeeded } from '../actions/shows';
+// components
+import Show from '../components/Show';
+
+const mapStateToProps = (state, ownProps) => {
+  const showId = +ownProps.match.params.id;
+
+  return ({
+    isFetching: state.shows.get('isFetching'),
+    show: state.shows.get('data').get(showId),
+  });
+};
+
+const mapDispatchToProps = dispatch => ({
+  fetchShowIfNeeded: showId => dispatch(fetchShowIfNeeded(showId)),
+});
+
+const ShowContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Show);
+
+export default ShowContainer;
