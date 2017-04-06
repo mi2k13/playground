@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   updateCollection: showId => dispatch(updateCollection(showId)),
-  fetchShowIfNeeded: showId => dispatch(fetchShowIfNeeded(showId)),
+  fetchShowIfNeeded: showsIds => dispatch(fetchShowIfNeeded(showsIds)),
 });
 
 const ShowContainer = connect(

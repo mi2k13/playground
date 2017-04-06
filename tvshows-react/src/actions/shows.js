@@ -41,6 +41,12 @@ export const fetchShowIfNeeded = showId => {
   }
 };
 
+export const fetchShowsIfNeeded = showsIds => {
+  return dispatch => {
+    return showsIds.map(showId => dispatch(fetchShowIfNeeded(showId)));
+  }
+};
+
 // SEARCH
 const searchShowRequest = query => ({
   type: 'SHOW_SEARCH_REQUEST',
