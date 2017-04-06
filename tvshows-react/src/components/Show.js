@@ -1,6 +1,7 @@
 import React from 'react';
-import { Map } from 'immutable';
+import { List, Map } from 'immutable';
 // components
+import Button from './common/Button';
 import Loader from './common/Loader';
 import ShowInfos from './ShowInfos';
 
@@ -18,8 +19,10 @@ class Show extends React.Component {
 
   render() {
     const {
+      collection,
       isFetching,
       show,
+      updateCollection,
     } = this.props;
 
     if (isFetching) {
@@ -31,8 +34,15 @@ class Show extends React.Component {
         <h1>
           {`${show.get('name')} (${new Date(show.get('premiered')).getFullYear()})`}
         </h1>
-        <ShowInfos show={show} />
 
+        {/* FOLLOW BUTTON */}
+        <Button
+          handleClick={() => updateCollection(+show.get('id'))}
+          label={collection.includes(show.get('id')) ? 'Unfollow' : 'Follow'}
+        />
+
+        {/* SHOWS INFOS AND SUMMARY */}
+        <ShowInfos show={show} />
         <div dangerouslySetInnerHTML={{ __html: show.get('summary') }} />
       </div>
     )
@@ -40,9 +50,11 @@ class Show extends React.Component {
 }
 
 Show.propTypes = {
-  fetchShowIfNeeded: React.PropTypes.func,
+  collection: React.PropTypes.instanceOf(List),
+  fetchShowIfNeeded: React.PropTypes.func.isRequired,
   isFetching: React.PropTypes.bool,
-  show: React.PropTypes.instanceOf(Map),
+  show: React.PropTypes.instanceOf(Map).isRequired,
+  updateCollection: React.PropTypes.func.isRequired,
 };
 
 Show.defaultProps = {

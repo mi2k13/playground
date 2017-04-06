@@ -12,7 +12,7 @@ const fetchShowSuccess = (showId, json) => ({
   type: 'SHOW_FETCH_SUCCESS',
   show: json,
   showId
-})
+});
 
 const fetchShow = showId => {
   return dispatch => {
