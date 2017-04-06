@@ -1,14 +1,12 @@
 import React from 'react';
 import { List } from 'immutable';
+import ShowListItem from './ShowListItem';
 
 const ShowsList = ({ shows }) => (
   <ul>
     {shows.map((show, index) =>
       <li key={index}>
-        {show.get('name')}
-        {show.get('network') &&
-          ` (${show.get('network').get('name')})`
-        }
+        <ShowListItem show={show} />
       </li>
     )}
   </ul>

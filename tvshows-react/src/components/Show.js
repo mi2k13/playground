@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Show = () => (
+const Show = ({ match }) => (
   <div>
-    <h1>Show</h1>
+    <h1>Show {match.params.id}</h1>
   </div>
 );
 
