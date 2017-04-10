@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Map } from 'immutable';
+// components
+import Image from './common/Image';
 
 // ============================================
 
 const ShowListItem = ({ show }) => (
   <div>
     <Link to={`/show/${show.get('id')}`}>
-      {show.get('name')}
-      {show.get('network') &&
-        ` (${show.get('network').get('name')})`
-      }
+      <Image
+        alt={show.get('name')}
+        image={show.get('image')}
+      />
     </Link>
   </div>
 );
