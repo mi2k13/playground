@@ -1,7 +1,11 @@
 import { connect } from 'react-redux';
 // actions
 import { updateCollection } from '../actions/collection';
-import { fetchShowIfNeeded } from '../actions/shows';
+import {
+  fetchShowIfNeeded,
+  fetchShowEpisodesIfNeeded,
+  fetchShowSeasonsIfNeeded,
+} from '../actions/shows';
 // components
 import Show from '../components/Show';
 
@@ -10,14 +14,18 @@ const mapStateToProps = (state, ownProps) => {
 
   return ({
     collection: state.collection,
+    episodes: state.shows.get('episodes').get(showId),
     isFetching: state.shows.get('isFetching'),
+    seasons: state.shows.get('seasons').get(showId),
     show: state.shows.get('data').get(showId),
   });
 };
 
 const mapDispatchToProps = dispatch => ({
-  updateCollection: showId => dispatch(updateCollection(showId)),
-  fetchShowIfNeeded: showsIds => dispatch(fetchShowIfNeeded(showsIds)),
+  updateCollection: showIds => dispatch(updateCollection(showIds)),
+  fetchShowIfNeeded: showsId => dispatch(fetchShowIfNeeded(showsId)),
+  fetchShowEpisodesIfNeeded: showsId => dispatch(fetchShowEpisodesIfNeeded(showsId)),
+  fetchShowSeasonsIfNeeded: showsId => dispatch(fetchShowSeasonsIfNeeded(showsId)),
 });
 
 const ShowContainer = connect(

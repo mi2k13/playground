@@ -2,7 +2,46 @@ const API_ROOT = 'http://api.tvmaze.com';
 
 // ==============================
 
-// FETCH
+// FETCH EPISODES
+const fetchShowEpisodesRequest = showId => ({
+  type: 'SHOW_FETCH_EPISODES_REQUEST',
+  showId
+});
+
+const fetchShowEpisodesSuccess = (showId, json) => ({
+  type: 'SHOW_FETCH_EPISODES_SUCCESS',
+  episodes: json,
+  showId
+});
+
+const fetchShowEpisodes = showId => {
+  return dispatch => {
+    dispatch(fetchShowEpisodesRequest(showId));
+
+    return fetch(`${ API_ROOT }/shows/${ showId }/episodes`)
+      .then(response => response.json())
+      .then(json => dispatch(fetchShowEpisodesSuccess(showId, json)));
+  };
+};
+
+const shouldFetchShowEpisodes = (state, showId) => {
+  const episodes = state.shows.get('episodes').get(showId);
+
+  if (!episodes || episodes.size === 0) {
+    return true;
+  }
+  return false;
+}
+
+export const fetchShowEpisodesIfNeeded = showId => {
+  return (dispatch, getState) => {
+    if(shouldFetchShowEpisodes(getState(), showId)) {
+      return dispatch(fetchShowEpisodes(showId));
+    }
+  }
+};
+
+// FETCH SHOW
 const fetchShowRequest = showId => ({
   type: 'SHOW_FETCH_REQUEST',
   showId
@@ -67,4 +106,44 @@ export const searchShow = query => {
       .then(response => response.json())
       .then(json => dispatch(searchShowSuccess(query, json)));
   };
+};
+
+
+// FETCH EPISODES
+const fetchShowSeasonsRequest = showId => ({
+  type: 'SHOW_FETCH_SEASONS_REQUEST',
+  showId
+});
+
+const fetchShowSeasonsSuccess = (showId, json) => ({
+  type: 'SHOW_FETCH_SEASONS_SUCCESS',
+  seasons: json,
+  showId
+});
+
+const fetchShowSeasons = showId => {
+  return dispatch => {
+    dispatch(fetchShowSeasonsRequest(showId));
+
+    return fetch(`${ API_ROOT }/shows/${ showId }/seasons`)
+      .then(response => response.json())
+      .then(json => dispatch(fetchShowSeasonsSuccess(showId, json)));
+  };
+};
+
+const shouldFetchShowSeasons = (state, showId) => {
+  const episodes = state.shows.get('episodes').get(showId);
+
+  if (!episodes || episodes.size === 0) {
+    return true;
+  }
+  return false;
+}
+
+export const fetchShowSeasonsIfNeeded = showId => {
+  return (dispatch, getState) => {
+    if(shouldFetchShowSeasons(getState(), showId)) {
+      return dispatch(fetchShowSeasons(showId));
+    }
+  }
 };

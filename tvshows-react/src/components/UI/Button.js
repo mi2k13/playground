@@ -11,12 +11,12 @@ const Button = ({ handleClick, label, type }) => (
 
 Button.propTypes = {
   handleClick: React.PropTypes.func,
-  label: React.PropTypes.string.isRequired,
+  label: React.PropTypes.any.isRequired,
   type: React.PropTypes.oneOf(['button', 'submit']),
 };
 
 Button.defaultProps = {
-  type: 'submit',
+  type: 'button',
 };
 
 export default Button;

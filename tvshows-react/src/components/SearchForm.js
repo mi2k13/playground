@@ -1,6 +1,6 @@
 import React from 'react';
 // components
-import Button from './common/Button';
+import Button from './UI/Button';
 
 // ============================================
 

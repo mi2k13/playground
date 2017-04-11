@@ -1,8 +1,9 @@
 import React from 'react';
 import { List, Map } from 'immutable';
 // components
-import Button from './common/Button';
-import Loader from './common/Loader';
+import Button from './UI/Button';
+import Loader from './UI/Loader';
+import Seasons from './Seasons';
 import ShowInfos from './ShowInfos';
 
 // ============================================
@@ -15,17 +16,21 @@ class Show extends React.Component {
 
   componentDidMount() {
     this.props.fetchShowIfNeeded(this.showId);
+    this.props.fetchShowEpisodesIfNeeded(this.showId);
+    this.props.fetchShowSeasonsIfNeeded(this.showId);
   }
 
   render() {
     const {
       collection,
+      episodes,
       isFetching,
+      seasons,
       show,
       updateCollection,
     } = this.props;
 
-    if (isFetching) {
+    if (isFetching.get('show') || isFetching.get('episodes') || isFetching.get('seasons')) {
       return <Loader />
     }
 
@@ -44,6 +49,12 @@ class Show extends React.Component {
         {/* SHOWS INFOS AND SUMMARY */}
         <ShowInfos show={show} />
         <div dangerouslySetInnerHTML={{ __html: show.get('summary') }} />
+
+        {/* SEASONS */}
+        <Seasons
+          episodes={episodes}
+          seasons={seasons}
+        />
       </div>
     )
   }
@@ -51,8 +62,10 @@ class Show extends React.Component {
 
 Show.propTypes = {
   collection: React.PropTypes.instanceOf(List),
+  episodes: React.PropTypes.instanceOf(List),
   fetchShowIfNeeded: React.PropTypes.func.isRequired,
-  isFetching: React.PropTypes.bool,
+  isFetching: React.PropTypes.instanceOf(Map),
+  seasons: React.PropTypes.instanceOf(List),
   show: React.PropTypes.instanceOf(Map).isRequired,
   updateCollection: React.PropTypes.func.isRequired,
 };

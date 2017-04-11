@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Map } from 'immutable';
 // components
-import Image from './common/Image';
+import Image from './UI/Image';
 
 // ============================================
 

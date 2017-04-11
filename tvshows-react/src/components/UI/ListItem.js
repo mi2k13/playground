@@ -3,7 +3,7 @@ import React from 'react';
 // ============================================
 
 const ListItem = ({ data, children }) => {
-  if (!data || data.size === 0) {
+  if (!children && (!data || data.size === 0)) {
     return null;
   }
   return (
