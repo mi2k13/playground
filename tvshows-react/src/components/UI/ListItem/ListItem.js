@@ -1,4 +1,6 @@
 import React from 'react';
+// styles
+import styles from './ListItem.css';
 
 // ============================================
 
@@ -7,7 +9,7 @@ const ListItem = ({ data, children }) => {
     return null;
   }
   return (
-    <li>
+    <li className={styles.root}>
       {children ? children : data}
     </li>
   )

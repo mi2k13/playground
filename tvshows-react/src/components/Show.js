@@ -1,8 +1,8 @@
 import React from 'react';
 import { List, Map } from 'immutable';
 // components
-import Button from './UI/Button';
-import Loader from './UI/Loader';
+import Button from './UI/Button/Button';
+import Loader from './UI/Loader/Loader';
 import Seasons from './Seasons';
 import ShowInfos from './ShowInfos';
 
@@ -34,6 +34,8 @@ class Show extends React.Component {
       return <Loader />
     }
 
+    const isFollowed = collection.includes(show.get('id'));
+
     return (
       <div>
         <h1>
@@ -43,7 +45,8 @@ class Show extends React.Component {
         {/* FOLLOW BUTTON */}
         <Button
           handleClick={() => updateCollection(+show.get('id'))}
-          label={collection.includes(show.get('id')) ? 'Unfollow' : 'Follow'}
+          isActive={!isFollowed}
+          label={isFollowed ? 'Unfollow' : 'Follow'}
         />
 
         {/* SHOWS INFOS AND SUMMARY */}

@@ -1,0 +1,22 @@
+.root {
+  padding: 6px 10px;
+  border-radius: 2px;
+  border-width: 0;
+  background: $grayLight2;
+  cursor: pointer;
+}
+.root:hover {
+  background: $grayLight1;
+}
+
+.root + .root {
+  margin-left: 5px;
+}
+
+.active {
+  background: $main;
+  color: #FFF;
+}
+.active:hover {
+  background: #226A94;
+}

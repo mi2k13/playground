@@ -2,7 +2,7 @@ import React from 'react';
 import { List } from 'immutable';
 // components
 import EpisodesListItem from './EpisodesListItem';
-import ListItem from './UI/ListItem';
+import ListItem from './UI/ListItem/ListItem';
 
 // ============================================
 

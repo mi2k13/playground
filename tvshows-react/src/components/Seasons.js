@@ -1,5 +1,6 @@
 import React from 'react';
 import { List } from 'immutable';
+// components
 import SeasonsNav from './SeasonsNav';
 import EpisodesList from './EpisodesList';
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { List } from 'immutable';
-import Button from './UI/Button';
+// components
+import Button from './UI/Button/Button';
 
 // ============================================
 
@@ -9,6 +10,7 @@ const SeasonsNav = ({ currentSeason, handleChange, seasons }) => (
     {seasons.map((season, index) =>
       <Button
         key={index}
+        isActive={season.get('number') === currentSeason}
         label={season.get('number')}
         handleClick={() => handleChange(season.get('number'))}
       />
