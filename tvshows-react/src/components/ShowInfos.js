@@ -6,7 +6,7 @@ import ListItem from './UI/ListItem/ListItem';
 
 // ============================================
 
-const ListItems = ({ show }) => {
+const ListItems = ({ show, style }) => {
   const getChannel = (network, webChannel) => {
     if (show.get('network')) {
       return network.get('name');
@@ -16,7 +16,7 @@ const ListItems = ({ show }) => {
   }
 
   return (
-    <ul>
+    <ul className={style}>
       <ListItem
         type="inline"
         separated
@@ -45,6 +45,7 @@ const ListItems = ({ show }) => {
 
 ListItems.propTypes = {
   show: React.PropTypes.instanceOf(Map),
+  style: React.PropTypes.string,
 };
 
 export default ListItems;

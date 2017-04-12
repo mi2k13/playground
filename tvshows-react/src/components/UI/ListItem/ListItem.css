@@ -1,4 +1,4 @@
-.root {
+.root:not(.inline) {
   margin: 10px 0;
 }
 

@@ -1,0 +1,19 @@
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 25px;
+}
+
+.infos {
+  color: $grayLight1;
+  font-size: $smallFontSize;
+}
+
+.summary {
+  margin: 25px 0;
+}

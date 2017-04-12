@@ -4,6 +4,7 @@ import { List, Map } from 'immutable';
 import Button from '../UI/Button/Button';
 import Heading from '../UI/Heading/Heading';
 import Loader from '../UI/Loader/Loader';
+import Section from '../UI/Section/Section';
 import Seasons from '../Seasons';
 import ShowInfos from '../ShowInfos';
 // styles
@@ -41,30 +42,46 @@ class Show extends React.Component {
 
     return (
       <div>
-        <Heading>
-          {`${show.get('name')} (${new Date(show.get('premiered')).getFullYear()})`}
-        </Heading>
+        <Section>
+          <div className={styles.headingContainer}>
+            <Heading style={styles.heading}>
+              {`${show.get('name')} (${new Date(show.get('premiered')).getFullYear()})`}
+            </Heading>
 
-        {/* FOLLOW BUTTON */}
-        <Button
-          handleClick={() => updateCollection(+show.get('id'))}
-          isActive={!isFollowed}
-          label={isFollowed ? 'Unfollow' : 'Follow'}
-          size="big"
-          style={styles.followButton}
-        />
+            {/* FOLLOW BUTTON */}
+            <Button
+              handleClick={() => updateCollection(+show.get('id'))}
+              isActive={!isFollowed}
+              label={isFollowed ? 'Unfollow' : 'Follow'}
+              size="big"
+              style={styles.followButton}
+            />
+          </div>
 
-        {/* SHOWS INFOS AND SUMMARY */}
-        <ShowInfos show={show} />
-        <div dangerouslySetInnerHTML={{ __html: show.get('summary') }} />
+          {/* SHOWS INFOS AND SUMMARY */}
+          <ShowInfos
+            show={show}
+            style={styles.infos}
+          />
+          <div
+            className={styles.summary}
+            dangerouslySetInnerHTML={{ __html: show.get('summary') }}
+          />
+        </Section>
+
 
         {/* SEASONS */}
-        <Seasons
-          episodes={episodes}
-          seasons={seasons}
-        />
+        <Section>
+          <Heading level={2} styleLevel={2}>
+            Seasons
+          </Heading>
+          <Seasons
+            episodes={episodes}
+            seasons={seasons}
+          />
+        </Section>
       </div>
-    )
+    );
   }
 }
 
