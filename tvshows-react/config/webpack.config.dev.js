@@ -11,6 +11,7 @@ var paths = require('./paths');
 var simpleVars = require('postcss-simple-vars');
 // variables
 var colors = require('./variables/Colors.js');
+var typography = require('./variables/Typography.js');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -174,7 +175,7 @@ module.exports = {
           'not ie < 9', // React doesn't support IE8 anyway
         ]
       }),
-      simpleVars({ variables: colors }),
+      simpleVars({ variables: Object.assign(colors, typography) }),
     ];
   },
   plugins: [
