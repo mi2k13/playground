@@ -1,0 +1,14 @@
+.root {
+  color: $grayDark1;
+	font-family: $headingFontFamily;
+}
+
+.heading1 {
+  font-size: $h1FontSize;
+}
+.heading2 {
+  font-size: $h2FontSize;
+}
+.heading3 {
+  font-size: $h3FontSize;
+}

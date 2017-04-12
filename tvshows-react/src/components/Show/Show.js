@@ -1,10 +1,13 @@
 import React from 'react';
 import { List, Map } from 'immutable';
 // components
-import Button from './UI/Button/Button';
-import Loader from './UI/Loader/Loader';
-import Seasons from './Seasons';
-import ShowInfos from './ShowInfos';
+import Button from '../UI/Button/Button';
+import Heading from '../UI/Heading/Heading';
+import Loader from '../UI/Loader/Loader';
+import Seasons from '../Seasons';
+import ShowInfos from '../ShowInfos';
+// styles
+import styles from './Show.css';
 
 // ============================================
 
@@ -38,15 +41,17 @@ class Show extends React.Component {
 
     return (
       <div>
-        <h1>
+        <Heading>
           {`${show.get('name')} (${new Date(show.get('premiered')).getFullYear()})`}
-        </h1>
+        </Heading>
 
         {/* FOLLOW BUTTON */}
         <Button
           handleClick={() => updateCollection(+show.get('id'))}
           isActive={!isFollowed}
           label={isFollowed ? 'Unfollow' : 'Follow'}
+          size="big"
+          style={styles.followButton}
         />
 
         {/* SHOWS INFOS AND SUMMARY */}

@@ -7,7 +7,7 @@ import {
   fetchShowSeasonsIfNeeded,
 } from '../actions/shows';
 // components
-import Show from '../components/Show';
+import Show from '../components/Show/Show';
 
 const mapStateToProps = (state, ownProps) => {
   const showId = +ownProps.match.params.id;
