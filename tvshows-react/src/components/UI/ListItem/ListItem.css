@@ -1,3 +1,15 @@
 .root {
   margin: 10px 0;
 }
+
+.inline {
+  display: inline-block;
+}
+.inline + .inline {
+  margin-left: 10px;
+}
+
+.separated + .separated:before {
+  content: '\00B7';
+  padding-right: 10px;
+}

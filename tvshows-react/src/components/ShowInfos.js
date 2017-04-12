@@ -17,10 +17,26 @@ const ListItems = ({ show }) => {
 
   return (
     <ul>
-      <ListItem data={getChannel(show.get('network'), show.get('webChannel'))} />
-      <ListItem data={show.get('status')} />
-      <ListItem data={show.get('language')} />
-      <ListItem data={show.get('genres')}>
+      <ListItem
+        type="inline"
+        separated
+        data={getChannel(show.get('network'), show.get('webChannel'))}
+      />
+      <ListItem
+        type="inline"
+        separated
+        data={show.get('status')}
+      />
+      <ListItem
+        type="inline"
+        separated
+        data={show.get('language')}
+      />
+      <ListItem
+        type="inline"
+        separated
+        data={show.get('genres')}
+      >
         <GenresList genres={show.get('genres')} />
       </ListItem>
     </ul>
