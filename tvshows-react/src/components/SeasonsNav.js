@@ -9,10 +9,11 @@ const SeasonsNav = ({ currentSeason, handleChange, seasons }) => (
   <div>
     {seasons.map((season, index) =>
       <Button
-        key={index}
-        isActive={season.get('number') === currentSeason}
-        label={season.get('number')}
         handleClick={() => handleChange(season.get('number'))}
+        isActive={season.get('number') === currentSeason}
+        key={index}
+        label={season.get('number')}
+        size="small"
       />
     )}
   </div>

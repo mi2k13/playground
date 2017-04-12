@@ -1,6 +1,5 @@
 .root {
-  padding: 6px 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   border-width: 0;
   background: $grayLight2;
   cursor: pointer;
@@ -19,4 +18,18 @@
 }
 .active:hover {
   background: #226A94;
+}
+
+/* sizes */
+.small {
+  padding: .3em .6em;
+  font-size: $smallFontSize;
+}
+.regular {
+  padding: .4em .8em;
+  font-size: $baseFontSize;
+}
+.big {
+  padding: .7em 1.6em;
+  font-size: $mediumFontSize;
 }
