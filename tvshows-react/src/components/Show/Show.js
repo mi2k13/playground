@@ -3,10 +3,11 @@ import { List, Map } from 'immutable';
 // components
 import Button from '../UI/Button/Button';
 import Heading from '../UI/Heading/Heading';
+import Image from '../UI/Image/Image';
 import Loader from '../UI/Loader/Loader';
 import Section from '../UI/Section/Section';
 import Seasons from '../Seasons';
-import ShowInfos from '../ShowInfos';
+import ShowInfos from '../ShowInfos/ShowInfos';
 // styles
 import styles from './Show.css';
 
@@ -42,10 +43,18 @@ class Show extends React.Component {
 
     return (
       <div>
-        <Section>
+        <Section style={styles.product}>
+          {/* POSTER */}
+          <Image
+            alt={show.get('name')}
+            image={show.get('image')}
+            style={styles.poster}
+          />
+
           <div className={styles.headingContainer}>
+            {/* PROUCT TITLE */}
             <Heading style={styles.heading}>
-              {`${show.get('name')} (${new Date(show.get('premiered')).getFullYear()})`}
+              {show.get('name')}
             </Heading>
 
             {/* FOLLOW BUTTON */}

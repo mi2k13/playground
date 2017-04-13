@@ -9,8 +9,10 @@ var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeMod
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
 var simpleVars = require('postcss-simple-vars');
+var utils = require('postcss-utils');
 // variables
 var colors = require('./variables/Colors.js');
+var layout = require('./variables/Layout.js');
 var typography = require('./variables/Typography.js');
 
 
@@ -175,7 +177,8 @@ module.exports = {
           'not ie < 9', // React doesn't support IE8 anyway
         ]
       }),
-      simpleVars({ variables: Object.assign(colors, typography) }),
+      simpleVars({ variables: Object.assign(colors, layout, typography) }),
+      utils,
     ];
   },
   plugins: [

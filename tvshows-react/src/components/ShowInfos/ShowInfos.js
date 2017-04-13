@@ -1,8 +1,11 @@
 import React from 'react';
 import { Map } from 'immutable';
 // components
-import GenresList from './GenresList';
-import ListItem from './UI/ListItem/ListItem';
+import GenresList from '../GenresList';
+import ListItem from '../UI/ListItem/ListItem';
+// style
+import styles from './ShowInfos.css';
+import cx from 'classnames';
 
 // ============================================
 
@@ -16,16 +19,21 @@ const ListItems = ({ show, style }) => {
   }
 
   return (
-    <ul className={style}>
+    <ul className={cx(styles.root, style)}>
       <ListItem
         type="inline"
         separated
-        data={getChannel(show.get('network'), show.get('webChannel'))}
+        data={new Date(show.get('premiered')).getFullYear()}
       />
       <ListItem
         type="inline"
         separated
         data={show.get('status')}
+      />
+      <ListItem
+        type="inline"
+        separated
+        data={getChannel(show.get('network'), show.get('webChannel'))}
       />
       <ListItem
         type="inline"

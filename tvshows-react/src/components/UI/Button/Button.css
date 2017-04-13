@@ -1,5 +1,5 @@
 .root {
-  border-radius: 3px;
+  border-radius: $baseBorderRadius;
   border-width: 0;
   background: $grayLight2;
   cursor: pointer;

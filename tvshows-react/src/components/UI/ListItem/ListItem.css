@@ -1,15 +1,15 @@
 .root:not(.inline) {
-  margin: 10px 0;
+  margin: $smallGap 0;
 }
 
 .inline {
   display: inline-block;
 }
 .inline + .inline {
-  margin-left: 10px;
+  margin-left: $smallGap;
 }
 
 .separated + .separated:before {
   content: '\00B7';
-  padding-right: 10px;
+  padding-right: $smallGap;
 }

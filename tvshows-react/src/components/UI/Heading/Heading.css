@@ -1,10 +1,12 @@
 .root {
+  margin: 0;
   color: $grayDark1;
 	font-family: $headingFontFamily;
 }
 
 .heading1 {
   font-size: $h1FontSize;
+  text-transform: uppercase;
 }
 .heading2 {
   font-size: $h2FontSize;
