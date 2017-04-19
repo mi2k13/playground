@@ -6,13 +6,14 @@ const cx = classNames.bind(styles);
 
 // ============================================
 
-const ListItem = ({ children, data, separated, type }) => {
+const ListItem = ({ children, data, separated, style, type }) => {
   if (!children && (!data || data.size === 0)) {
     return null;
   }
 
   const liStyle = cx(
     styles.root,
+    style,
     {
       inline: type === 'inline',
       separated: separated,
@@ -29,6 +30,7 @@ const ListItem = ({ children, data, separated, type }) => {
 ListItem.propTypes = {
   data: React.PropTypes.any,
   separated: React.PropTypes.bool,
+  style: React.PropTypes.string,
   type: React.PropTypes.string,
 };
 

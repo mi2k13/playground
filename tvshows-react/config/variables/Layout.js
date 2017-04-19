@@ -1,7 +1,7 @@
 module.exports = {
   baseBorderRadius: '3px',
 
-  smallGap: '0.7em',
+  gapSmall: '0.7em',
   gap: '1.4em',
   gapXl: '2.4em',
 };

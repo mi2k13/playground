@@ -1,8 +1,8 @@
 import React from 'react';
-import { List } from 'immutable';
+import { List, Map } from 'immutable';
 // components
-import SeasonsNav from './SeasonsNav';
-import EpisodesList from './EpisodesList';
+import Dropdown from '../UI/Dropdown/Dropdown';
+import EpisodesList from '../EpisodesList';
 
 // ============================================
 
@@ -36,11 +36,16 @@ class Seasons extends React.Component {
       currentSeason,
     } = this.state;
 
+    const seasonsList = seasons.map(season => (Map({
+      value: season.get('number'),
+      label: `Season ${season.get('number')}`,
+    })));
+
     return (
       <div>
-        <SeasonsNav
-          currentSeason={currentSeason}
-          seasons={seasons}
+        <Dropdown
+          currentLabel={`Season ${currentSeason}`}
+          options={seasonsList}
           handleChange={this.handleCurrentSeasonChange}
         />
         <EpisodesList

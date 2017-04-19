@@ -1,0 +1,23 @@
+.root {
+  position: relative;
+  cursor: pointer;
+}
+.root.open .menu {
+  display: block;
+}
+
+.label {
+  padding: .4em .8em;
+  border-radius: $baseBorderRadius;
+  background: $grayLight3;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  margin-top: .4em;
+  border-radius: $baseBorderRadius;
+  background: $grayLight2;
+}

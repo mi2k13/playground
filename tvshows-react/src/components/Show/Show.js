@@ -6,7 +6,7 @@ import Heading from '../UI/Heading/Heading';
 import Image from '../UI/Image/Image';
 import Loader from '../UI/Loader/Loader';
 import Section from '../UI/Section/Section';
-import Seasons from '../Seasons';
+import Seasons from '../Seasons/Seasons';
 import ShowInfos from '../ShowInfos/ShowInfos';
 // styles
 import styles from './Show.css';
@@ -81,9 +81,6 @@ class Show extends React.Component {
 
         {/* SEASONS */}
         <Section>
-          <Heading level={2} styleLevel={2}>
-            Seasons
-          </Heading>
           <Seasons
             episodes={episodes}
             seasons={seasons}

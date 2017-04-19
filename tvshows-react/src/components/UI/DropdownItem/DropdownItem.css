@@ -1,0 +1,10 @@
+.root {
+  padding: .4em .8em;
+}
+.root:hover {
+  background: $main;
+  color: #FFF;
+}
+.root.active {
+  font-weight: bold;
+}
