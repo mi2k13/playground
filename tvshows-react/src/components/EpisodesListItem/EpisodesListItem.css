@@ -1,0 +1,21 @@
+.root {
+  @utils-clearfix;
+}
+
+.date {
+  float: left;
+  margin-right: $gapSmall;
+  padding: .2em .4em;
+  border-radius: $baseBorderRadius;
+  background: $grayLight3;
+  color: $grayLight1;
+  font-size: $smallFontSize;
+}
+.unaired .date {
+  background: $main;
+  color: #FFF;
+}
+
+.episode {
+  overflow: hidden;
+}
