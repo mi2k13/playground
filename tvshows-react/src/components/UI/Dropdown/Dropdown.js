@@ -2,6 +2,7 @@ import React from 'react';
 import { List } from 'immutable';
 // components
 import DropdownItem from '../DropdownItem/DropdownItem';
+import Icon from '../Icon/Icon';
 // styles
 import styles from './Dropdown.css';
 import classnames from 'classnames/bind';
@@ -46,8 +47,14 @@ class Dropdown extends React.Component {
         onClick={this.toggleMenu}
       >
         {/* LABEL */}
-        <span className={styles.label}>
-          {currentLabel}
+        <span className={styles.labelContainer}>
+          <span className={styles.label}>
+            {currentLabel}
+          </span>
+          <Icon
+            symbol="arrow"
+            style={styles.icon}
+          />
         </span>
 
         {/* MENU */}

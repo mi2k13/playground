@@ -1,0 +1,17 @@
+.root {
+  vertical-align: middle;
+  fill: $grayDark2;
+}
+
+.small {
+  width: $iconSmall;
+  height: $iconSmall;
+}
+.regular {
+  width: $iconRegular;
+  height: $iconRegular;
+}
+.big {
+  width: $iconBig;
+  height: $iconBig;
+}

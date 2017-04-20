@@ -6,10 +6,17 @@
   display: block;
 }
 
-.label {
+.labelContainer {
   padding: .4em .8em;
   border-radius: $baseBorderRadius;
   background: $grayLight3;
+}
+.label {
+  vertical-align: baseline;
+}
+
+.icon {
+  margin-left: $gapSmall;
 }
 
 .menu {

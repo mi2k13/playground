@@ -11,6 +11,8 @@ The app was build with [create-react-app](https://github.com/facebookincubator/c
 * [redux](http://redux.js.org/)
 * [redux-thunk](https://github.com/gaearon/redux-thunk/)
 * [classnames](https://github.com/JedWatson/classnames/)
+* [spritesh](https://github.com/edenspiekermann/sprite.sh)
+* [svgo](https://github.com/svg/svgo)
 
 
 ## Available Scripts
@@ -39,6 +41,11 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
+
+### `npm sprite`
+
+Generate sprite file from files in `static/media/icons`.
+
 
 ## Supported Language Features and Polyfills
 
@@ -70,6 +77,7 @@ This project setup uses [Webpack](https://webpack.github.io/) for handling all a
 It uses CSS Modules to have local scoped CSS and postcss pluggins.
 
 ### PostCSS pluggins
+
 * [autoprefixer](https://github.com/postcss/autoprefixer/)
 * [postcss-simple_vars](https://github.com/postcss/postcss-simple-vars/)
 * [postcss-simple_vars](https://github.com/postcss/postcss-simple-vars/)

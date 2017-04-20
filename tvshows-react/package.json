@@ -14,7 +14,9 @@
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "spritesh": "^1.2.0",
+    "svgo": "^0.7.2"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -59,7 +61,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "sprite": "spritesh --input images/icons --output images/sprite.svg --prefix icon- --viewbox \"0 0 16 16\" \"npm run optiSprite\"",
+    "optiSprite": "svgo src/svg"
   },
   "jest": {
     "collectCoverageFrom": [
