@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { List } from 'immutable';
 // components
 import DropdownItem from '../DropdownItem/DropdownItem';
@@ -19,6 +20,23 @@ class Dropdown extends React.Component {
     };
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleClickOutside, true);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleClickOutside, true);
+  }
+
+  handleClickOutside(event) {
+    const domNode = ReactDOM.findDOMNode(this);
+
+    if ((!domNode || !domNode.contains(event.target))) {
+        this.setState({ open : false });
+    }
   }
 
   toggleMenu() {
@@ -42,7 +60,7 @@ class Dropdown extends React.Component {
     );
 
     return (
-      <div
+      <span
         className={divStyle}
         onClick={this.toggleMenu}
       >
@@ -69,7 +87,7 @@ class Dropdown extends React.Component {
             )
           )}
         </ul>
-      </div>
+      </span>
     )
   }
 }
