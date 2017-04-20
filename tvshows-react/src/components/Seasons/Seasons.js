@@ -3,6 +3,8 @@ import { List, Map } from 'immutable';
 // components
 import Dropdown from '../UI/Dropdown/Dropdown';
 import EpisodesList from '../EpisodesList';
+// styles
+import styles from './Seasons.css';
 
 // ============================================
 
@@ -43,11 +45,14 @@ class Seasons extends React.Component {
 
     return (
       <div>
+        {/* DROPDOWN MENU */}
         <Dropdown
           currentLabel={`Season ${currentSeason}`}
           options={seasonsList}
           handleChange={this.handleCurrentSeasonChange}
+          style={styles.dropdown}
         />
+        {/* EPISODES */}
         <EpisodesList
           currentSeason={currentSeason}
           episodes={this.getCurrentSeasonEpisodes(currentSeason, episodes)}
