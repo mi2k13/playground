@@ -22,8 +22,8 @@ const Header = () => {
   return (
     <header className={styles.root}>
       <ul className={styles.nav}>
-        <Item link="/" label="Recherche" />
-        <Item link="/collection" label="collection" />
+        <Item link="/" label="Search" />
+        <Item link="/collection" label="Collection" />
       </ul>
     </header>
   );
