@@ -3,7 +3,7 @@
 }
 
 .header {
-  margin: $gapXl 0;
+  margin: $gap 0 $gapXl;
   text-align: center;
 }
 

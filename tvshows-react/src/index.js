@@ -12,12 +12,14 @@ import './index.css';
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <div className="container">
+      <div>
         <Header />
 
-        <Route exact path="/" component={SearchShowContainer} />
-        <Route path="/collection" component={CollectionContainer} />
-        <Route path="/show/:id" component={ShowContainer} />
+        <div className="container">
+          <Route exact path="/" component={SearchShowContainer} />
+          <Route path="/collection" component={CollectionContainer} />
+          <Route path="/show/:id" component={ShowContainer} />
+        </div>
       </div>
     </BrowserRouter>
   </Provider>,
