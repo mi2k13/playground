@@ -19,8 +19,11 @@ button {
 	color: $grayDark2;
 }
 
+a {
+	text-decoration: none;
+}
+
 :global(.container) {
-  padding: 25px;
 	max-width: 900px;
 	margin: 0 auto;
 };

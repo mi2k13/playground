@@ -1,0 +1,24 @@
+.root {
+  height: 4em;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $grayLight3;
+  background: #FFF;
+}
+
+.item {
+  display: inline-block;
+  padding: $gap;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.itemLink {
+  color: $grayDark2;
+}
+.active,
+.item a:hover {
+  color: $grayDark1;
+}
