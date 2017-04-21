@@ -1,8 +1,12 @@
 import React from 'react';
 import { Map } from 'immutable';
 // components
-import SearchForm from './SearchForm/SearchForm';
-import ShowList from './ShowList/ShowList';
+import Heading from '../UI/Heading/Heading';
+import Loader from '../UI/Loader/Loader';
+import SearchForm from '../SearchForm/SearchForm';
+import ShowList from '../ShowList/ShowList';
+// styles
+import styles from './SearchShow.css';
 
 // ============================================
 
@@ -37,20 +41,41 @@ class SearchShow extends React.Component {
 
   render() {
     const {
+      isFetching,
       shows,
     } = this.props;
 
+    const {
+      query,
+    } = this.state;
+
     return (
       <div>
-        <h1>Search show</h1>
+        {/* HEADING */}
+        <Heading>
+          Search
+        </Heading>
 
+        {/* FORM */}
         <SearchForm
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           placeholder="Breakind Bad, Lost,..."
         />
 
-        <ShowList shows={shows.get('searchResults')} />
+        {/* LOADER */}
+        {isFetching &&
+          <Loader />
+        }
+
+        {/* EMPTY MESSAGE OR RESULTS */}
+        {query && !isFetching && shows.get('searchResults').size === 0
+          ? <p>No results :(</p>
+          : <ShowList
+              shows={shows.get('searchResults')}
+              style={styles.results}
+            />
+        }
       </div>
     );
   }
@@ -58,6 +83,7 @@ class SearchShow extends React.Component {
 
 SearchShow.propTypes = {
   searchShow: React.PropTypes.func.isRequired,
+  isFetching: React.PropTypes.bool,
   shows: React.PropTypes.instanceOf(Map),
 };
 

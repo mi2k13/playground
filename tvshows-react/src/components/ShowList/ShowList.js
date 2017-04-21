@@ -4,11 +4,12 @@ import { List } from 'immutable';
 import ShowListItem from '../ShowListItem/ShowListItem';
 // styles
 import styles from './ShowList.css';
+import cx from 'classnames';
 
 // ============================================
 
-const ShowsList = ({ collection, shows, handleItemButtonClick }) => (
-  <ul className={styles.root}>
+const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => (
+  <ul className={cx(styles.root, style)}>
     {shows.map((show, index) =>
       <li
         key={index}
@@ -28,6 +29,7 @@ ShowsList.propTypes = {
   collection: React.PropTypes.instanceOf(List),
   handleItemButtonClick: React.PropTypes.func,
   shows: React.PropTypes.instanceOf(List),
+  style: React.PropTypes.string,
 };
 
 export default ShowsList;

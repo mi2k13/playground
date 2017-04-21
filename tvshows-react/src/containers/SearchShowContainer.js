@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 // actions
 import { searchShow } from '../actions/shows';
 // components
-import SearchShow from '../components/SearchShow';
+import SearchShow from '../components/SearchShow/SearchShow';
 
 const mapStateToProps = state => ({
-  shows: state.shows
+  shows: state.shows,
+  isFetching: state.shows.get('isFetching').get('search'),
 });
 
 const mapDispatchToProps = dispatch => ({
