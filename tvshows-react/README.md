@@ -86,7 +86,7 @@ It uses CSS Modules to have local scoped CSS and postcss pluggins.
 Variables are set in `config/variables`. Then it can be used in CSS files :
 ```css
 .root {
-  color: $main;
+  color: $brand;
 }
 .active {
   background: $active;

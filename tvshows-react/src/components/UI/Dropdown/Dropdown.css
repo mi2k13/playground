@@ -17,6 +17,7 @@
 
 .icon {
   margin-left: $gapSmall;
+  transform: rotate(90deg);
 }
 
 .menu {

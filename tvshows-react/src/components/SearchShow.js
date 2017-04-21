@@ -2,7 +2,7 @@ import React from 'react';
 import { Map } from 'immutable';
 // components
 import SearchForm from './SearchForm';
-import ShowsList from './ShowsList';
+import ShowList from './ShowList/ShowList';
 
 // ============================================
 
@@ -50,7 +50,7 @@ class SearchShow extends React.Component {
           placeholder="Breakind Bad, Lost,..."
         />
 
-        <ShowsList shows={shows.get('searchResults')} />
+        <ShowList shows={shows.get('searchResults')} />
       </div>
     );
   }

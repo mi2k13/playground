@@ -13,7 +13,7 @@
 }
 
 .active {
-  background: $main;
+  background: $brand;
   color: #FFF;
 }
 .active:hover {

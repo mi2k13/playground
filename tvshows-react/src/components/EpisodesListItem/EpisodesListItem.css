@@ -12,7 +12,7 @@
   font-size: $smallFontSize;
 }
 .unaired .date {
-  background: $main;
+  background: $brand;
   color: #FFF;
 }
 

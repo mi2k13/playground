@@ -1,6 +1,6 @@
 import { List } from 'immutable';
 
-const initialState = List([123]);
+const initialState = List([123, 170, 543, 743, 7246, 245, 75, 37, 842, 8423]);
 
 const collection = (state = initialState, action) => {
   switch(action.type) {

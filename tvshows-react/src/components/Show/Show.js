@@ -46,7 +46,7 @@ class Show extends React.Component {
 
           <div className={styles.header}>
             {/* PROUCT TITLE */}
-            <Heading>
+            <Heading hasSubtitle>
               {show.get('name')}
             </Heading>
 
@@ -60,10 +60,11 @@ class Show extends React.Component {
             <Button
               handleClick={() => updateCollection(+show.get('id'))}
               isActive={!isFollowed}
-              label={isFollowed ? 'Unfollow' : 'Follow'}
               size="big"
               style={styles.followButton}
-            />
+            >
+              {isFollowed ? 'Unfollow' : 'Follow'}
+            </Button>
           </div>
 
           {/* SUMMARY */}

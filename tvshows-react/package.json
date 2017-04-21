@@ -62,7 +62,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "sprite": "spritesh --input images/icons --output images/sprite.svg --prefix icon- --viewbox \"0 0 16 16\" \"npm run optiSprite\"",
+    "sprite": "spritesh --input static/media/icons --output static/media/sprite.svg --prefix icon- \"npm run optiSprite\"",
     "optiSprite": "svgo src/svg"
   },
   "jest": {

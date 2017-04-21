@@ -6,29 +6,29 @@ const cx = classNames.bind(styles);
 
 // ============================================
 
-const Button = ({ handleClick, isActive, label, size, style, type }) => {
+const Button = ({ children, handleClick, isActive, size, style, type }) => {
   const buttonStyle = cx(
     styles.root,
+    size,
+    style,
     {
       active: isActive,
-      [size]: size,
-      [style]: style,
     }
   );
+
   return (
     <button
       className={buttonStyle}
       onClick={handleClick}
       type={type}
     >
-      {label}
+      {children}
     </button>
   );
 };
 
 Button.propTypes = {
   handleClick: React.PropTypes.func,
-  label: React.PropTypes.any.isRequired,
   size: React.PropTypes.string,
   style: React.PropTypes.string,
   type: React.PropTypes.oneOf(['button', 'submit']),

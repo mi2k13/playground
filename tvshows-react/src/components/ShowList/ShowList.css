@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.item {
+  flex: 1 0 10em;
+  margin: $gapSmall;
+}
+

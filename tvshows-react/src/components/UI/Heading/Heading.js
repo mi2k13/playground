@@ -6,12 +6,13 @@ const cx = classNames.bind(styles);
 
 // ============================================
 
-const Heading = ({ children, level, styleLevel, style }) => {
+const Heading = ({ children, hasSubtitle, level, styleLevel, style }) => {
   const headingStyle = cx(
     styles.root,
     `heading${styleLevel}`,
+    style,
     {
-      [style]: style,
+      subtitled: hasSubtitle
     }
   );
 
@@ -29,6 +30,7 @@ const Heading = ({ children, level, styleLevel, style }) => {
 };
 
 Heading.propTypes = {
+  hasSubtitle: React.PropTypes.bool,
   level: React.PropTypes.number,
   style: React.PropTypes.string,
   styleLevel: React.PropTypes.number,

@@ -1,0 +1,26 @@
+.root {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: none;
+  background: $grayLight2;
+  cursor: pointer;
+}
+.button.active {
+  background: $brand;
+}
+.button.active:hover {
+  background: $brandDarken;
+}
+
+.active svg {
+  fill: #FFF;
+}

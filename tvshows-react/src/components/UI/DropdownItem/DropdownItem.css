@@ -2,7 +2,7 @@
   padding: .4em .8em;
 }
 .root:hover {
-  background: $main;
+  background: $brand;
   color: #FFF;
 }
 .root.active {

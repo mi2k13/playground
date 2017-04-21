@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateCollection } from '../actions/collection';
 import { fetchShowsIfNeeded } from '../actions/shows';
 // components
-import Collection from '../components/Collection';
+import Collection from '../components/Collection/Collection';
 
 const mapStateToProps = state => ({
   collection: state.collection,

@@ -3,10 +3,15 @@
   color: $grayDark1;
 	font-family: $headingFontFamily;
 }
+.root:not(.subtitled) {
+  margin-bottom: $gap;
+}
 
 .heading1 {
+  margin-top: $gapSmall;
   font-size: $h1FontSize;
   text-transform: uppercase;
+  text-align: center;
 }
 .heading2 {
   font-size: $h2FontSize;
