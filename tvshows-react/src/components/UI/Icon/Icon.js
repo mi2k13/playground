@@ -1,5 +1,4 @@
 import React from 'react';
-import sprite from '../../../../static/media/sprite.svg';
 // styles
 import styles from './Icon.css';
 import classnames from 'classnames/bind';
@@ -15,7 +14,7 @@ const Icon = ({ size, style, symbol }) => {
   );
   return (
     <svg className={svgStyle}>
-      <use xlinkHref={`${sprite}#icon-${symbol}`} />
+      <use xlinkHref={`#icon-${symbol}`} />
     </svg>
   );
 };

@@ -16,6 +16,7 @@
     "redux-devtools-extension": "^2.13.0",
     "redux-thunk": "^2.2.0",
     "spritesh": "^1.2.0",
+    "svg-inline-loader": "^0.7.1",
     "svgo": "^0.7.2"
   },
   "devDependencies": {

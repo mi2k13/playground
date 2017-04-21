@@ -8,7 +8,12 @@ var ManifestPlugin = require('webpack-manifest-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
-
+var simpleVars = require('postcss-simple-vars');
+var utils = require('postcss-utils');
+// variables
+var colors = require('./variables/Colors.js');
+var layout = require('./variables/Layout.js');
+var typography = require('./variables/Typography.js');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -156,10 +161,7 @@ module.exports = {
       // "file" loader for svg
       {
         test: /\.svg$/,
-        loader: 'file',
-        query: {
-          name: 'static/media/[name].[hash:8].[ext]'
-        }
+        loader: 'svg-inline?classPrefix'
       }
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "url" loader exclusion list.
@@ -177,6 +179,8 @@ module.exports = {
           'not ie < 9', // React doesn't support IE8 anyway
         ]
       }),
+      simpleVars({ variables: Object.assign(colors, layout, typography) }),
+      utils,
     ];
   },
   plugins: [
