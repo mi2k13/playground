@@ -22,7 +22,7 @@ const SearchForm = ({ handleChange, handleSubmit, placeholder }) => (
       style={styles.button}
       type="submit"
     >
-      Chercher
+      Search
     </Button>
   </form>
 );
