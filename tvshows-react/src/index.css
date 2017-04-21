@@ -25,7 +25,11 @@ button {
 }
 
 a {
+	color: $brand;
 	text-decoration: none;
+}
+a:hover {
+	color: $brandDarken;
 }
 
 input {

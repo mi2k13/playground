@@ -21,8 +21,14 @@ const Image = ({ alt, image, size, style, width }) => {
     );
   }
   return (
-    <div>
-      Missing image for {alt}
+    <div className={cx(
+      styles.root,
+      styles.missing,
+      style
+    )}>
+      <span className={styles.missingLabel}>
+        {alt}
+      </span>
     </div>
   );
 };
