@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map } from 'immutable';
 // components
-import SearchForm from './SearchForm';
+import SearchForm from './SearchForm/SearchForm';
 import ShowList from './ShowList/ShowList';
 
 // ============================================

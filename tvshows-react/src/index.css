@@ -1,5 +1,10 @@
 html {
 	font-size: 15px;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -21,6 +26,17 @@ button {
 
 a {
 	text-decoration: none;
+}
+
+input {
+	padding: .4em .8em;
+	border-radius: $baseBorderRadius;
+	border: 1px solid $grayLight2;
+	font-size: 1em;
+}
+input[type="search"] {
+   -webkit-appearance: textfield;
+   -webkit-box-sizing: content-box;
 }
 
 :global(.container) {

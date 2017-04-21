@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { List, Map } from 'immutable';
 // components
-import Button from '../UI/Button/Button';
 import Icon from '../UI/Icon/Icon';
 import Image from '../UI/Image/Image';
 // styles
@@ -13,7 +12,7 @@ const cx = classnames.bind(styles);
 // ============================================
 
 const ShowListItem = ({ collection, show, handleButtonClick }) => {
-  const isFollowed = collection.includes(show.get('id'));
+  const isFollowed = collection && collection.includes(show.get('id'));
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -49,7 +48,7 @@ const ShowListItem = ({ collection, show, handleButtonClick }) => {
 }
 
 ShowListItem.propTypes = {
-  collection: React.PropTypes.instanceOf(List).isRequired,
+  collection: React.PropTypes.instanceOf(List),
   show: React.PropTypes.instanceOf(Map).isRequired,
   handleButtonClick: React.PropTypes.func,
 };

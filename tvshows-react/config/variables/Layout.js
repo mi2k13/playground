@@ -8,4 +8,6 @@ module.exports = {
   iconSmall: '0.6em',
   iconRegular: '0.8em',
   iconBig: '1.2em',
+
+  zHeader: 100,
 };
