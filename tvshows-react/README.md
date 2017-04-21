@@ -13,7 +13,7 @@ The app was build with [create-react-app](https://github.com/facebookincubator/c
 * [classnames](https://github.com/JedWatson/classnames/)
 * [spritesh](https://github.com/edenspiekermann/sprite.sh)
 * [svgo](https://github.com/svg/svgo)
-
+* [svg4everybody](https://github.com/jonathantneal/svg4everybody)
 
 ## Available Scripts
 
@@ -79,7 +79,6 @@ It uses CSS Modules to have local scoped CSS and postcss pluggins.
 ### PostCSS pluggins
 
 * [autoprefixer](https://github.com/postcss/autoprefixer/)
-* [postcss-simple_vars](https://github.com/postcss/postcss-simple-vars/)
 * [postcss-simple_vars](https://github.com/postcss/postcss-simple-vars/)
 
 ### Variables
