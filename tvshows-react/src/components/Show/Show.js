@@ -3,7 +3,6 @@ import { List, Map } from 'immutable';
 // components
 import Button from '../UI/Button/Button';
 import Heading from '../UI/Heading/Heading';
-import Image from '../UI/Image/Image';
 import Loader from '../UI/Loader/Loader';
 import Section from '../UI/Section/Section';
 import Seasons from '../Seasons/Seasons';
@@ -44,18 +43,18 @@ class Show extends React.Component {
     return (
       <div>
         <Section style={styles.product}>
-          {/* POSTER */}
-          <Image
-            alt={show.get('name')}
-            image={show.get('image')}
-            style={styles.poster}
-          />
 
-          <div className={styles.headingContainer}>
+          <div className={styles.header}>
             {/* PROUCT TITLE */}
-            <Heading style={styles.heading}>
+            <Heading>
               {show.get('name')}
             </Heading>
+
+            {/* SHOWS INFOS */}
+            <ShowInfos
+              show={show}
+              style={styles.infos}
+            />
 
             {/* FOLLOW BUTTON */}
             <Button
@@ -67,20 +66,13 @@ class Show extends React.Component {
             />
           </div>
 
-          {/* SHOWS INFOS AND SUMMARY */}
-          <ShowInfos
-            show={show}
-            style={styles.infos}
-          />
-          <div
-            className={styles.summary}
-            dangerouslySetInnerHTML={{ __html: show.get('summary') }}
-          />
+          {/* SUMMARY */}
+          <div dangerouslySetInnerHTML={{ __html: show.get('summary') }} />
         </Section>
 
 
-        {/* SEASONS */}
         <Section>
+          {/* SEASONS */}
           <Seasons
             episodes={episodes}
             seasons={seasons}

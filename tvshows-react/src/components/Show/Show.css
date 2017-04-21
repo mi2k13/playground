@@ -2,17 +2,13 @@
   @utils-clearfix;
 }
 
-.headingContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.heading {
-  margin-right: $gap;
+.header {
+  margin: $gapXl 0;
+  text-align: center;
 }
 
-.summary {
-  margin: $gap 0;
+.followButton {
+  margin-top: $gap;
 }
 
 .poster {
