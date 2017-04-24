@@ -9,11 +9,11 @@ import styles from './Seasons.css';
 // ============================================
 
 class Seasons extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      currentSeason: 1,
+      currentSeason: props.seasons.size > 0 ? props.seasons.first().get('number') : null,
     };
 
     this.getCurrentSeasonEpisodes = this.getCurrentSeasonEpisodes.bind(this);
