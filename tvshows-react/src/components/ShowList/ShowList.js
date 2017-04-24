@@ -10,7 +10,7 @@ import cx from 'classnames';
 
 const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => (
   <ul className={cx(styles.root, style)}>
-    {shows.map((show, index) =>
+    {shows.map((show, index) => (
       <li
         key={index}
         className={styles.item}
@@ -21,7 +21,7 @@ const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => (
           handleButtonClick={handleItemButtonClick}
         />
       </li>
-    )}
+    ))}
   </ul>
 );
 

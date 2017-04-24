@@ -1,7 +1,3 @@
-.product {
-  @utils-clearfix;
-}
-
 .header {
   margin: $gap 0 $gapXl;
   text-align: center;
@@ -9,10 +5,4 @@
 
 .followButton {
   margin-top: $gap;
-}
-
-.poster {
-  float: left;
-  margin-right: $gap;
-  width: 150px;
 }

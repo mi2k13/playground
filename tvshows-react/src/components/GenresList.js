@@ -5,12 +5,12 @@ import { List } from 'immutable';
 
 const GenresList = ({ genres }) => (
   <span>
-    {genres.map((genre, index) =>
+    {genres.map((genre, index) => (
       <span key={index}>
         {genre}
         {(index < genres.size - 1) && ', '}
       </span>
-    )}
+    ))}
   </span>
 );
 

@@ -8,11 +8,11 @@ import ListItem from './UI/ListItem/ListItem';
 
 const EpisodesList = ({ episodes }) => (
   <ul>
-    {episodes.map((episode, index) =>
+    {episodes.map((episode, index) => (
       <ListItem key={index}>
         <EpisodesListItem episode={episode} />
       </ListItem>
-    )}
+    ))}
   </ul>
 );
 
