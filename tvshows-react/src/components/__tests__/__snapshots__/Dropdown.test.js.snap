@@ -1,0 +1,59 @@
+exports[`test Renders Dropdown menu 1`] = `
+<span
+  className=""
+  onClick={[Function]}>
+  <span
+    className={undefined}>
+    <span
+      className={undefined} />
+    <svg
+      className="regular">
+      <use
+        xlinkHref="#icon-arrow" />
+    </svg>
+  </span>
+  <ul
+    className={undefined}>
+    <li
+      className=""
+      onClick={[Function]}>
+      First item
+    </li>
+    <li
+      className=""
+      onClick={[Function]}>
+      Second item
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`test Toggle Dropdown menu 1`] = `
+<span
+  className=""
+  onClick={[Function]}>
+  <span
+    className={undefined}>
+    <span
+      className={undefined} />
+    <svg
+      className="regular">
+      <use
+        xlinkHref="#icon-arrow" />
+    </svg>
+  </span>
+  <ul
+    className={undefined}>
+    <li
+      className=""
+      onClick={[Function]}>
+      First item
+    </li>
+    <li
+      className=""
+      onClick={[Function]}>
+      Second item
+    </li>
+  </ul>
+</span>
+`;
