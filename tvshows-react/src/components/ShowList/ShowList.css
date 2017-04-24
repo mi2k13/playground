@@ -13,3 +13,13 @@
   margin: $gapSmall;
 }
 
+@media (max-width: 400px) {
+  .root {
+    display: block;
+  }
+  .item {
+    display: inline-block;
+    width: calc(50% - $gapSmall * 2);
+    vertical-align: top;
+  }
+}

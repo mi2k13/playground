@@ -6,6 +6,7 @@
   position: relative;
   padding: $gapSmall;
   height: 100%;
+  min-height: 10em;
   background: $grayLight2;
   text-align: center;
 }

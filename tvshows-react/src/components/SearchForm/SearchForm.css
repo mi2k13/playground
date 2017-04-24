@@ -14,3 +14,11 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+@media (max-width: 390px) {
+  .button,
+  .input {
+    padding: .4em .8em;
+    font-size: $baseFontSize;
+  }
+}
