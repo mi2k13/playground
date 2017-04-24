@@ -8,22 +8,28 @@ import cx from 'classnames';
 
 // ============================================
 
-const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => (
-  <ul className={cx(styles.root, style)}>
-    {shows.map((show, index) => (
-      <li
-        key={index}
-        className={styles.item}
-      >
-        <ShowListItem
-          collection={collection}
-          show={show}
-          handleButtonClick={handleItemButtonClick}
-        />
-      </li>
-    ))}
-  </ul>
+const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => {
+  if (shows.size === 0) {
+    return <p>No results :(</p>;
+  }
+
+  return (
+    <ul className={cx(styles.root, style)}>
+      {shows.map((show, index) => (
+        <li
+          key={index}
+          className={styles.item}
+        >
+          <ShowListItem
+            collection={collection}
+            show={show}
+            handleButtonClick={handleItemButtonClick}
+          />
+        </li>
+      ))}
+    </ul>
 );
+};
 
 ShowsList.propTypes = {
   collection: React.PropTypes.instanceOf(List),

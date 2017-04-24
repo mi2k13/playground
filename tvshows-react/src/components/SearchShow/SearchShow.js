@@ -16,10 +16,29 @@ class SearchShow extends React.Component {
 
     this.state = {
       query: '',
+      showLoader: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.isFetching && nextProps.isFetching) {
+      // shows loader for at least 500ms so user has visual feedback on his search
+      this.setState({ showLoader: true });
+      setTimeout(() => {
+          this.setState({ showLoader: false });
+      }, 500);
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // dont render component on query update. the view doesn't change
+    if (nextState.query !== this.state.query) {
+      return false;
+    }
+    return true;
   }
 
   handleSubmit(event) {
@@ -31,14 +50,6 @@ class SearchShow extends React.Component {
     this.setState({ query: event.target.value });
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    // dont render component on query update. the view doesn't change
-    if (nextState.query !== this.state.query) {
-      return false;
-    }
-    return true;
-  }
-
   render() {
     const {
       isFetching,
@@ -47,6 +58,7 @@ class SearchShow extends React.Component {
 
     const {
       query,
+      showLoader,
     } = this.state;
 
     return (
@@ -64,17 +76,16 @@ class SearchShow extends React.Component {
         />
 
         {/* LOADER */}
-        {isFetching &&
+        {showLoader &&
           <Loader />
         }
 
-        {/* EMPTY MESSAGE OR RESULTS */}
-        {query && !isFetching && shows.get('searchResults').size === 0
-          ? <p>No results :(</p>
-          : <ShowList
-              shows={shows.get('searchResults')}
-              style={styles.results}
-            />
+        {/* RESULTS */}
+        {!showLoader && query &&
+          <ShowList
+            shows={shows.get('searchResults')}
+            style={styles.results}
+          />
         }
       </div>
     );
