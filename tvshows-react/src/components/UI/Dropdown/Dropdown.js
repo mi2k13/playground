@@ -76,17 +76,19 @@ class Dropdown extends React.Component {
         </span>
 
         {/* MENU */}
-        <ul className={styles.menu}>
-          {options.map((option, id) => (
-              <DropdownItem
-                key={id}
-                isActive={option.get('label') === currentLabel}
-                item={option}
-                handleClick={handleChange}
-              />
-            )
-          )}
-        </ul>
+        <div className={styles.menu}>
+          <ul>
+            {options.map((option, id) => (
+                <DropdownItem
+                  key={id}
+                  isActive={option.get('label') === currentLabel}
+                  item={option}
+                  handleClick={handleChange}
+                />
+              )
+            )}
+          </ul>
+        </div>
       </span>
     )
   }
