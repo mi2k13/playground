@@ -4,7 +4,7 @@ import { Map } from 'immutable';
 import Heading from '../UI/Heading/Heading';
 import Loader from '../UI/Loader/Loader';
 import SearchForm from '../SearchForm/SearchForm';
-import ShowList from '../ShowList/ShowList';
+import ShowsList from '../ShowsList/ShowsList';
 // styles
 import styles from './SearchShow.css';
 
@@ -82,7 +82,7 @@ class SearchShow extends React.Component {
 
         {/* RESULTS */}
         {!showLoader && query &&
-          <ShowList
+          <ShowsList
             shows={shows.get('searchResults')}
             style={styles.results}
           />

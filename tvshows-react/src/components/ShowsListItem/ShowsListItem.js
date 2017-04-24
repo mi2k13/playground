@@ -5,13 +5,13 @@ import { List, Map } from 'immutable';
 import Icon from '../UI/Icon/Icon';
 import Image from '../UI/Image/Image';
 // styles
-import styles from './ShowListItem.css';
+import styles from './ShowsListItem.css';
 import classnames from 'classnames/bind';
 const cx = classnames.bind(styles);
 
 // ============================================
 
-const ShowListItem = ({ collection, show, handleButtonClick }) => {
+const ShowsListItem = ({ collection, show, handleButtonClick }) => {
   const isFollowed = collection && collection.includes(show.get('id'));
 
   const handleClick = (event) => {
@@ -47,10 +47,10 @@ const ShowListItem = ({ collection, show, handleButtonClick }) => {
   );
 }
 
-ShowListItem.propTypes = {
+ShowsListItem.propTypes = {
   collection: React.PropTypes.instanceOf(List),
   show: React.PropTypes.instanceOf(Map).isRequired,
   handleButtonClick: React.PropTypes.func,
 };
 
-export default ShowListItem;
+export default ShowsListItem;

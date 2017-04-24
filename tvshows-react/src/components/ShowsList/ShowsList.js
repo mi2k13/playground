@@ -1,9 +1,9 @@
 import React from 'react';
 import { List } from 'immutable';
 // components
-import ShowListItem from '../ShowListItem/ShowListItem';
+import ShowsListItem from '../ShowsListItem/ShowsListItem';
 // styles
-import styles from './ShowList.css';
+import styles from './ShowsList.css';
 import cx from 'classnames';
 
 // ============================================
@@ -20,7 +20,7 @@ const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => {
           key={index}
           className={styles.item}
         >
-          <ShowListItem
+          <ShowsListItem
             collection={collection}
             show={show}
             handleButtonClick={handleItemButtonClick}

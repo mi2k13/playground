@@ -2,7 +2,7 @@ import React from 'react';
 import { List } from 'immutable';
 // components
 import Heading from '../UI/Heading/Heading';
-import ShowList from '../ShowList/ShowList';
+import ShowsList from '../ShowsList/ShowsList';
 
 // ============================================
 
@@ -28,7 +28,7 @@ class Collection extends React.Component {
         <Heading>
           Collection
         </Heading>
-        <ShowList
+        <ShowsList
           collection={collection}
           handleItemButtonClick={this.updateCollection}
           shows={shows}
