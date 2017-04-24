@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map } from 'immutable';
 // components
-import GenresList from '../GenresList';
+import GenresList from '../GenresList/GenresList';
 import ListItem from '../UI/ListItem/ListItem';
 // style
 import styles from './ShowInfos.css';

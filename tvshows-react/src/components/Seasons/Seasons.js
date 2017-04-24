@@ -2,7 +2,7 @@ import React from 'react';
 import { List, Map } from 'immutable';
 // components
 import Dropdown from '../UI/Dropdown/Dropdown';
-import EpisodesList from '../EpisodesList';
+import EpisodesList from '../EpisodesList/EpisodesList';
 // styles
 import styles from './Seasons.css';
 

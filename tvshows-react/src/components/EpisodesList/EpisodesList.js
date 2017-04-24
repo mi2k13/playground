@@ -1,8 +1,8 @@
 import React from 'react';
 import { List } from 'immutable';
 // components
-import EpisodesListItem from './EpisodesListItem/EpisodesListItem';
-import ListItem from './UI/ListItem/ListItem';
+import EpisodesListItem from '../EpisodesListItem/EpisodesListItem';
+import ListItem from '../UI/ListItem/ListItem';
 
 // ============================================
 
