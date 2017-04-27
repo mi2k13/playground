@@ -14,6 +14,7 @@ The app was build with [create-react-app](https://github.com/facebookincubator/c
 * [spritesh](https://github.com/edenspiekermann/sprite.sh)
 * [svgo](https://github.com/svg/svgo)
 * [svg4everybody](https://github.com/jonathantneal/svg4everybody)
+* [pre-commit](https://github.com/observing/pre-commit)
 
 ## Available Scripts
 
