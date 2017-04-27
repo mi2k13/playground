@@ -35,7 +35,7 @@ class Dropdown extends React.Component {
   handleClickOutside(event) {
     const domNode = ReactDOM.findDOMNode(this);
 
-    if ((!domNode || !domNode.contains(event.target))) {
+    if (!domNode || !domNode.contains(event.target)) {
         this.setState({ open : false });
     }
   }

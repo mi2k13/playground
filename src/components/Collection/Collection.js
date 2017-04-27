@@ -21,7 +21,6 @@ class Collection extends React.Component {
     const {
       collection,
       shows,
-      updateCollection,
     } = this.props;
 
     return (

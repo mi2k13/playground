@@ -53,7 +53,6 @@ class SearchShow extends React.Component {
 
   render() {
     const {
-      isFetching,
       shows,
     } = this.props;
 

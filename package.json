@@ -53,7 +53,6 @@
     "lint-staged": "^3.4.0",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
-    "pre-commit": "^1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
     "style-loader": "0.13.1",
@@ -68,7 +67,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "sprite": "spritesh --input static/media/icons --output static/media/sprite.svg --prefix icon- \"npm run optiSprite\"",
-    "optiSprite": "svgo src/svg"
+    "optiSprite": "svgo src/svg",
+    "eslint": "eslint --ext .js src/"
   },
   "jest": {
     "collectCoverageFrom": [

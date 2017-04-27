@@ -20,13 +20,10 @@ const Heading = ({ children, hasSubtitle, level, styleLevel, style }) => {
   switch(level) {
     case 1:
       return <h1 className={headingStyle}>{children}</h1>;
-      break;
     case 2:
       return <h2 className={headingStyle}>{children}</h2>;
-      break;
     default:
       return <h3 className={headingStyle}>{children}</h3>;
-      break;
   }
 };
 
