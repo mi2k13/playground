@@ -36,7 +36,7 @@ class Show extends React.Component {
     } = this.props;
 
     if (isFetching.get('show') || isFetching.get('episodes') || isFetching.get('seasons')) {
-      return <Loader />
+      return <Loader />;
     }
 
     const isFollowed = collection.includes(show.get('id'));

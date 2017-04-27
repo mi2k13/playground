@@ -17,7 +17,7 @@ const ListItems = ({ show, style }) => {
     } else if (show.get('webChannel')) {
       return webChannel.get('name');
     } return 'Unknown';
-  }
+  };
 
   return (
     <ul className={cx(styles.root, style)}>

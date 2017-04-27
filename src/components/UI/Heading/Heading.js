@@ -13,7 +13,7 @@ const Heading = ({ children, hasSubtitle, level, styleLevel, style }) => {
     `heading${styleLevel}`,
     style,
     {
-      subtitled: hasSubtitle
+      subtitled: hasSubtitle,
     }
   );
 

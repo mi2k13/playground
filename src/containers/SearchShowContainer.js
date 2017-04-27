@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  searchShow: query => dispatch(searchShow(query))
+  searchShow: query => dispatch(searchShow(query)),
 });
 
 const SearchShowContainer = connect(

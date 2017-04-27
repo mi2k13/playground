@@ -6,9 +6,6 @@
 # testing
 /coverage
 
-# lint
-.eslintrc
-
 # production
 /build
 

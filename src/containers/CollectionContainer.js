@@ -7,7 +7,7 @@ import Collection from '../components/Collection/Collection';
 
 const mapStateToProps = state => ({
   collection: state.collection,
-  shows: state.shows.get('data').toList().filter(show => state.collection.includes(show.get('id')))
+  shows: state.shows.get('data').toList().filter(show => state.collection.includes(show.get('id'))),
 });
 
 const mapDispatchToProps = dispatch => ({

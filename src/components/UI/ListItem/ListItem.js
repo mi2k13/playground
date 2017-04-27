@@ -25,7 +25,7 @@ const ListItem = ({ children, data, separated, style, type }) => {
     <li className={liStyle}>
       {children ? children : data}
     </li>
-  )
+  );
 };
 
 ListItem.propTypes = {

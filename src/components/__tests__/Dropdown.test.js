@@ -10,11 +10,11 @@ test('Renders Dropdown menu', () => {
     <Dropdown options={List([
       Map({
         value: 1,
-        label: 'First item'
+        label: 'First item',
       }),
       Map({
         value: 2,
-        label: 'Second item'
+        label: 'Second item',
       }),
     ])} />
   ).toJSON();
@@ -26,11 +26,11 @@ test('Toggle Dropdown menu', () => {
     <Dropdown options={List([
       Map({
         value: 1,
-        label: 'First item'
+        label: 'First item',
       }),
       Map({
         value: 2,
-        label: 'Second item'
+        label: 'Second item',
       }),
     ])} />
   ).toJSON();

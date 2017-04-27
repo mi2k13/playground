@@ -18,7 +18,7 @@ const ShowsListItem = ({ collection, show, handleButtonClick }) => {
   const handleClick = (event) => {
     event.preventDefault();
     handleButtonClick(+show.get('id'));
-  }
+  };
 
   return (
     <div className={styles.root}>
@@ -46,7 +46,7 @@ const ShowsListItem = ({ collection, show, handleButtonClick }) => {
       </Link>
     </div>
   );
-}
+};
 
 ShowsListItem.propTypes = {
   collection: PropTypes.instanceOf(List),

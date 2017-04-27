@@ -16,7 +16,7 @@ const EpisodesListItem = ({ episode }) => {
     if (episodeNumber < 10) {
       return '0' + episodeNumber;
     } return episodeNumber;
-  }
+  };
 
   return (
     <div className={cx(styles.root, { unaired: !hasBeenAired })}>

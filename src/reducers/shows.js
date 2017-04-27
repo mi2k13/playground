@@ -7,7 +7,7 @@ const initialState = Map({
     episodes: false,
     seasons: false,
     search: false,
-    show: false
+    show: false,
   }),
   searchResults: List(),
   seasons: Map(),

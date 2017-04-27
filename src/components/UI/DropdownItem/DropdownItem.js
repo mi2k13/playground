@@ -12,7 +12,7 @@ const DropdownItem = ({ handleClick, isActive, item }) => {
   const liStyle = cx(
     styles.root,
     {
-      active: isActive
+      active: isActive,
     }
   );
 
@@ -23,7 +23,7 @@ const DropdownItem = ({ handleClick, isActive, item }) => {
     >
       {item.get('label')}
     </li>
-  )
+  );
 };
 
 DropdownItem.propTypes = {
