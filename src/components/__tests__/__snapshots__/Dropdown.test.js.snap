@@ -12,19 +12,21 @@ exports[`test Renders Dropdown menu 1`] = `
         xlinkHref="#icon-arrow" />
     </svg>
   </span>
-  <ul
+  <div
     className={undefined}>
-    <li
-      className=""
-      onClick={[Function]}>
-      First item
-    </li>
-    <li
-      className=""
-      onClick={[Function]}>
-      Second item
-    </li>
-  </ul>
+    <ul>
+      <li
+        className=""
+        onClick={[Function]}>
+        First item
+      </li>
+      <li
+        className=""
+        onClick={[Function]}>
+        Second item
+      </li>
+    </ul>
+  </div>
 </span>
 `;
 
@@ -42,18 +44,20 @@ exports[`test Toggle Dropdown menu 1`] = `
         xlinkHref="#icon-arrow" />
     </svg>
   </span>
-  <ul
+  <div
     className={undefined}>
-    <li
-      className=""
-      onClick={[Function]}>
-      First item
-    </li>
-    <li
-      className=""
-      onClick={[Function]}>
-      Second item
-    </li>
-  </ul>
+    <ul>
+      <li
+        className=""
+        onClick={[Function]}>
+        First item
+      </li>
+      <li
+        className=""
+        onClick={[Function]}>
+        Second item
+      </li>
+    </ul>
+  </div>
 </span>
 `;
