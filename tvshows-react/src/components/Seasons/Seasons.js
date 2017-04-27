@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List, Map } from 'immutable';
 // components
 import Dropdown from '../UI/Dropdown/Dropdown';
@@ -63,9 +64,9 @@ class Seasons extends React.Component {
 }
 
 Seasons.propTypes = {
-  currentSeason: React.PropTypes.number.isRequired,
-  episodes: React.PropTypes.instanceOf(List),
-  seasons: React.PropTypes.instanceOf(List).isRequired,
+  currentSeason: PropTypes.number.isRequired,
+  episodes: PropTypes.instanceOf(List),
+  seasons: PropTypes.instanceOf(List).isRequired,
 };
 
 Seasons.defaultProps = {

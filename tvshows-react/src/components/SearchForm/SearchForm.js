@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // components
 import Button from '../UI/Button/Button';
 // styles
@@ -28,9 +29,9 @@ const SearchForm = ({ handleChange, handleSubmit, placeholder }) => (
 );
 
 SearchForm.propTypes = {
-  handleChange: React.PropTypes.func,
-  handleSubmit: React.PropTypes.func,
-  placeholder: React.PropTypes.string,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 
 SearchForm.defaultProps = {

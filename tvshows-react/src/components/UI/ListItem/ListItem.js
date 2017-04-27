@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // styles
 import styles from './ListItem.css';
 import classNames from 'classnames/bind';
@@ -28,10 +29,10 @@ const ListItem = ({ children, data, separated, style, type }) => {
 };
 
 ListItem.propTypes = {
-  data: React.PropTypes.any,
-  separated: React.PropTypes.bool,
-  style: React.PropTypes.string,
-  type: React.PropTypes.string,
+  data: PropTypes.any,
+  separated: PropTypes.bool,
+  style: PropTypes.string,
+  type: PropTypes.string,
 };
 
 ListItem.defaultProps = {

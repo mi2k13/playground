@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List, Map } from 'immutable';
 // components
 import Button from '../UI/Button/Button';
@@ -85,13 +86,13 @@ class Show extends React.Component {
 }
 
 Show.propTypes = {
-  collection: React.PropTypes.instanceOf(List),
-  episodes: React.PropTypes.instanceOf(List),
-  fetchShowIfNeeded: React.PropTypes.func.isRequired,
-  isFetching: React.PropTypes.instanceOf(Map),
-  seasons: React.PropTypes.instanceOf(List),
-  show: React.PropTypes.instanceOf(Map).isRequired,
-  updateCollection: React.PropTypes.func.isRequired,
+  collection: PropTypes.instanceOf(List),
+  episodes: PropTypes.instanceOf(List),
+  fetchShowIfNeeded: PropTypes.func.isRequired,
+  isFetching: PropTypes.instanceOf(Map),
+  seasons: PropTypes.instanceOf(List),
+  show: PropTypes.instanceOf(Map).isRequired,
+  updateCollection: PropTypes.func.isRequired,
 };
 
 Show.defaultProps = {

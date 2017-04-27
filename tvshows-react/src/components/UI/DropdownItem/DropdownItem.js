@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map } from 'immutable';
 // styles
 import styles from './DropdownItem.css';
@@ -26,9 +27,9 @@ const DropdownItem = ({ handleClick, isActive, item }) => {
 };
 
 DropdownItem.propTypes = {
-  handleClick: React.PropTypes.func,
-  isActive: React.PropTypes.bool,
-  item: React.PropTypes.instanceOf(Map).isRequired,
+  handleClick: PropTypes.func,
+  isActive: PropTypes.bool,
+  item: PropTypes.instanceOf(Map).isRequired,
 };
 
 export default DropdownItem;

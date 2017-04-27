@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map } from 'immutable';
 // components
 import Heading from '../UI/Heading/Heading';
@@ -93,9 +94,9 @@ class SearchShow extends React.Component {
 }
 
 SearchShow.propTypes = {
-  searchShow: React.PropTypes.func.isRequired,
-  isFetching: React.PropTypes.bool,
-  shows: React.PropTypes.instanceOf(Map),
+  searchShow: PropTypes.func.isRequired,
+  isFetching: PropTypes.bool,
+  shows: PropTypes.instanceOf(Map),
 };
 
 export default SearchShow;

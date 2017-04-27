@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List } from 'immutable';
 
 // ============================================
@@ -15,7 +16,7 @@ const GenresList = ({ genres }) => (
 );
 
 GenresList.propTypes = {
-  genres: React.PropTypes.instanceOf(List),
+  genres: PropTypes.instanceOf(List),
 };
 
 GenresList.defaultProps = {

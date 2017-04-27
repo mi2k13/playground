@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map } from 'immutable';
 // styles
 import styles from './EpisodesListItem.css';
@@ -32,7 +33,7 @@ const EpisodesListItem = ({ episode }) => {
 };
 
 EpisodesListItem.propTypes = {
-  episode: React.PropTypes.instanceOf(Map).isRequired,
+  episode: PropTypes.instanceOf(Map).isRequired,
 };
 
 export default EpisodesListItem;

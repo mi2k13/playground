@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // styles
 import styles from './Section.css';
 import cx from 'classnames';
@@ -12,7 +13,7 @@ const Section = ({ children, style }) => (
 );
 
 Section.propTypes = {
-  style: React.PropTypes.string,
+  style: PropTypes.string,
 };
 
 export default Section;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List } from 'immutable';
 // components
 import EpisodesListItem from '../EpisodesListItem/EpisodesListItem';
@@ -23,7 +24,7 @@ const EpisodesList = ({ episodes }) => {
 };
 
 EpisodesList.propTypes = {
-  episodes: React.PropTypes.instanceOf(List).isRequired,
+  episodes: PropTypes.instanceOf(List).isRequired,
 };
 
 export default EpisodesList;

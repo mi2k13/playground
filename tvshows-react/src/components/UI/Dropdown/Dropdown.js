@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import { List } from 'immutable';
 // components
 import DropdownItem from '../DropdownItem/DropdownItem';
@@ -95,10 +95,10 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  currentLabel: React.PropTypes.string,
-  handleChange: React.PropTypes.func,
-  options: React.PropTypes.instanceOf(List).isRequired,
-  style: React.PropTypes.string,
+  currentLabel: PropTypes.string,
+  handleChange: PropTypes.func,
+  options: PropTypes.instanceOf(List).isRequired,
+  style: PropTypes.string,
 };
 
 export default Dropdown;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // styles
 import styles from './Button.css';
 import classNames from 'classnames/bind';
@@ -28,10 +29,10 @@ const Button = ({ children, handleClick, isActive, size, style, type }) => {
 };
 
 Button.propTypes = {
-  handleClick: React.PropTypes.func,
-  size: React.PropTypes.string,
-  style: React.PropTypes.string,
-  type: React.PropTypes.oneOf(['button', 'submit']),
+  handleClick: PropTypes.func,
+  size: PropTypes.string,
+  style: PropTypes.string,
+  type: PropTypes.oneOf(['button', 'submit']),
 };
 
 Button.defaultProps = {

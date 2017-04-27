@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { List } from 'immutable';
 // components
 import ShowsListItem from '../ShowsListItem/ShowsListItem';
@@ -32,10 +33,10 @@ const ShowsList = ({ collection, handleItemButtonClick, shows, style }) => {
 };
 
 ShowsList.propTypes = {
-  collection: React.PropTypes.instanceOf(List),
-  handleItemButtonClick: React.PropTypes.func,
-  shows: React.PropTypes.instanceOf(List),
-  style: React.PropTypes.string,
+  collection: PropTypes.instanceOf(List),
+  handleItemButtonClick: PropTypes.func,
+  shows: PropTypes.instanceOf(List),
+  style: PropTypes.string,
 };
 
 export default ShowsList;

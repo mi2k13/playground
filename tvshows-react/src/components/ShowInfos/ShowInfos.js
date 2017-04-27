@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map } from 'immutable';
 // components
 import GenresList from '../GenresList/GenresList';
@@ -52,8 +53,8 @@ const ListItems = ({ show, style }) => {
 };
 
 ListItems.propTypes = {
-  show: React.PropTypes.instanceOf(Map),
-  style: React.PropTypes.string,
+  show: PropTypes.instanceOf(Map),
+  style: PropTypes.string,
 };
 
 export default ListItems;

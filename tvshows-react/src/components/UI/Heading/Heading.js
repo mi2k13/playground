@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // styles
 import styles from './Heading.css';
 import classNames from 'classnames/bind';
@@ -30,10 +31,10 @@ const Heading = ({ children, hasSubtitle, level, styleLevel, style }) => {
 };
 
 Heading.propTypes = {
-  hasSubtitle: React.PropTypes.bool,
-  level: React.PropTypes.number,
-  style: React.PropTypes.string,
-  styleLevel: React.PropTypes.number,
+  hasSubtitle: PropTypes.bool,
+  level: PropTypes.number,
+  style: PropTypes.string,
+  styleLevel: PropTypes.number,
 };
 
 Heading.defaultProps = {

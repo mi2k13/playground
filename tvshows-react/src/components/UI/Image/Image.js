@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map } from 'immutable';
 // styles
 import styles from './Image.css';
@@ -34,11 +35,11 @@ const Image = ({ alt, image, size, style, width }) => {
 };
 
 Image.propTypes = {
-  alt: React.PropTypes.string,
-  image: React.PropTypes.instanceOf(Map),
-  size: React.PropTypes.string,
-  style: React.PropTypes.string,
-  width: React.PropTypes.string,
+  alt: PropTypes.string,
+  image: PropTypes.instanceOf(Map),
+  size: PropTypes.string,
+  style: PropTypes.string,
+  width: PropTypes.string,
 };
 
 Image.defaultProps = {

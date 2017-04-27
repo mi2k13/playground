@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { List, Map } from 'immutable';
 // components
@@ -48,9 +49,9 @@ const ShowsListItem = ({ collection, show, handleButtonClick }) => {
 }
 
 ShowsListItem.propTypes = {
-  collection: React.PropTypes.instanceOf(List),
-  show: React.PropTypes.instanceOf(Map).isRequired,
-  handleButtonClick: React.PropTypes.func,
+  collection: PropTypes.instanceOf(List),
+  show: PropTypes.instanceOf(Map).isRequired,
+  handleButtonClick: PropTypes.func,
 };
 
 export default ShowsListItem;
