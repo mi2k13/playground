@@ -44,7 +44,9 @@ class SearchShow extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.searchShow(this.state.query);
+    if (this.state.query) {
+      this.props.searchShow(this.state.query);
+    }
   }
 
   handleChange(event) {
