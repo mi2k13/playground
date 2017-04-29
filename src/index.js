@@ -9,6 +9,7 @@ import SearchShowContainer from './containers/SearchShowContainer';
 import ShowContainer from './containers/ShowContainer';
 import CollectionContainer from './containers/CollectionContainer';
 // styles
+import './reset.css';
 import './index.css';
 // sprite
 import sprite from '../static/media/sprite.svg';
