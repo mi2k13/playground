@@ -2,6 +2,7 @@
   "name": "tvshows-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/react-tvshows",
   "dependencies": {
     "classnames": "^2.2.5",
     "immutable": "^3.8.1",

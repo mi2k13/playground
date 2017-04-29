@@ -16,7 +16,7 @@ import sprite from '../static/media/sprite.svg';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div>
         {/* HEADER */}
         <Header />
